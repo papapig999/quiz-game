@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    color: white;
+}
+
+.question-text{
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 1.5rem 0;
+  display: none;          /* hidden by default */
+}
+
+.question-box{
+  display:flex;
+  flex-direction:column;
+  align-items:center;   /* horizontal centre */
+  justify-content:center;
+  margin:1rem 0;
+}
+
+.loader{
+  position:fixed; inset:0;
+  background:#111; color:#fff;
+  display:flex; align-items:center; justify-content:center;
+  z-index:9999;
+}
+
+.screen {
+    display: none;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.screen.active {
+    display: block;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    margin: 10px;
+    width: 200px;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 16px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+.header {
+    background: rgba(255,255,255,0.1);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#question-image {
+    width: 100%;
+    max-width: 500px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.answers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.answers button {
+    padding: 15px;
+    font-size: 16px;
+    background: #3498db;
+}
+
+.answers button:hover {
+    background: #2980b9;
+}
+
+.answers button.correct {
+    background: #27ae60;
+}
+
+.answers button.wrong {
+    background: #e74c3c;
+}
+
+.leaderboard-preview, .leaderboard {
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.leaderboard-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
